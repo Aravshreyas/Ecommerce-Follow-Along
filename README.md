@@ -45,3 +45,9 @@ This application is built using the **MERN Stack**, a popular technology stack f
 In this milestone, we created a login page using react and tailwind css. Then we linked it to the app.jsx using a loginPage.jsx in the pages folder.
 Here, we learned about the differences between css and tailwind css and how to use it effectively.
 
+## **Milestone 3: Project Setup**
+### Features Implemented
+- Structured backend folders for routes, controllers, models, and middlewares.
+- Set up a Node.js server using Express.
+- Connected the server to MongoDB.
+- Implemented basic error handling for better debugging.
