@@ -51,3 +51,12 @@ Here, we learned about the differences between css and tailwind css and how to u
 - Set up a Node.js server using Express.
 - Connected the server to MongoDB.
 - Implemented basic error handling for better debugging.
+
+## **Milestone 4: User Management and File Uploads**
+### Features Implemented
+- Created a User Model:
+Defined a schema for storing user data using MongoDB. The schema includes fields like name, email, and password to map the structure of user information.
+- Developed a User Controller:
+Implemented logic for managing user-related actions such as adding new users and retrieving their information. This controller acts as a bridge between the user interface and the database.
+- Set Up File Uploads with Multer:
+Configured Multer to handle file uploads, allowing users to upload profile pictures or other files. Files are stored securely in the backend with paths linked to user profiles.
