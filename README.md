@@ -60,3 +60,11 @@ Defined a schema for storing user data using MongoDB. The schema includes fields
 Implemented logic for managing user-related actions such as adding new users and retrieving their information. This controller acts as a bridge between the user interface and the database.
 - Set Up File Uploads with Multer:
 Configured Multer to handle file uploads, allowing users to upload profile pictures or other files. Files are stored securely in the backend with paths linked to user profiles.
+
+## **Milestone 5: User Sign-Up Page and Form Validation**
+## Features Implemented
+- Created the Sign-Up page :
+Designed a user-friendly, clean, and simple form where users can input their details, including name, email, and password.
+Added Form Validation:
+- Implemented validation for user inputs such as checking if the email format is correct and ensuring the password meets certain security criteria (e.g., minimum length).
+Ensured that only valid data is submitted to the server.
