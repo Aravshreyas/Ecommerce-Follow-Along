@@ -68,3 +68,12 @@ Designed a user-friendly, clean, and simple form where users can input their det
 Added Form Validation:
 - Implemented validation for user inputs such as checking if the email format is correct and ensuring the password meets certain security criteria (e.g., minimum length).
 Ensured that only valid data is submitted to the server.
+
+## **Milestone 6: Secure Password Storage and Data Handling**
+## Features Implemented
+- Password Encryption:
+Used bcrypt to hash passwords during the signup process.
+Stored only hashed passwords in the database to ensure that sensitive information is never saved as plain text.
+- Secure Data Handling:
+Saved user data such as name, email, and hashed password in the MongoDB database.
+Ensured compliance with security standards to protect user privacy and prevent data breaches.

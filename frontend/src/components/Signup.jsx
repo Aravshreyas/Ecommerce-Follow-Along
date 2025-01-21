@@ -1,5 +1,7 @@
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 const SignUp = () => {
   const {
@@ -9,14 +11,17 @@ const SignUp = () => {
     watch,
   } = useForm();
 
+  const [fileUrl, setFileUrl] = useState(null);
+  const profilePicture = watch("profilePicture");
+
   // Validation functions
   const validateName = (name) => {
     const nameRegex = /^[a-zA-Z][a-zA-Z\s'-]{1,49}$/;
     if (name.length < 2) {
-      return 'Name cannot be less than 2 characters';
+      return "Name must be at least 2 characters long.";
     }
     if (!nameRegex.test(name)) {
-      return 'Name should not have any symbols';
+      return "Name can only include letters, spaces, apostrophes, or hyphens.";
     }
     return true;
   };
@@ -27,51 +32,73 @@ const SignUp = () => {
       maxLength: 128,
       hasUpperCase: /[A-Z]/,
       hasLowerCase: /[a-z]/,
-      hasSpecialChar: /[!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?]/, 
+      hasSpecialChar: /[!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?]/,
+      hasDigit: /\d/,
     };
     if (password.length < passwordRegex.minLength) {
-      return 'Password should be more than or equal to 8 characters';
+      return "Password should be at least 8 characters long.";
     }
-
     if (password.length > passwordRegex.maxLength) {
-      return 'Password should be less than 128 characters';
+      return "Password should be less than 128 characters.";
     }
-
     if (!passwordRegex.hasLowerCase.test(password)) {
-      return 'Password should have some lowercase characters (a-z)';
+      return "Password should include lowercase characters (a-z).";
     }
     if (!passwordRegex.hasUpperCase.test(password)) {
-      return 'Password should have some uppercase characters (A-Z)';
+      return "Password should include uppercase characters (A-Z).";
     }
     if (!passwordRegex.hasSpecialChar.test(password)) {
-      return 'Password should have special characters';
+      return "Password should include special characters.";
     }
-
+    if (!passwordRegex.hasDigit.test(password)) {
+      return "Password should include at least one numeric character (0-9).";
+    }
     return true;
   };
 
   const validateEmail = (email) => {
     const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     if (email.length > 254) {
-      return 'Email is too long';
+      return "Email is too long.";
     }
-
     if (!emailRegex.test(email)) {
-      return 'Write the email in the correct format (e.g., name@example.com)';
+      return "Write the email in the correct format (e.g., name@example.com).";
     }
     return true;
   };
 
-  const handleSignUp = (data) => {
+  const handleSignUp = async (data) => {
     const { name, email, password, profilePicture } = data;
-
-    // Handle image file (e.g., upload to server or process locally)
     const file = profilePicture[0];
-    alert(`Welcome, ${name}! Your email is ${email}.`);
-    console.log("Uploaded file:", file);
+
+    try {
+      const formData = new FormData();
+      formData.append("name", name);
+      formData.append("email", email);
+      formData.append("password", password);
+      formData.append("profilePicture", file);
+
+      const response = await axios.post("http://localhost:8080/user/create-user", formData, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },  
+      });
+
+      alert(`Sign-up successful! Welcome, ${name}`);
+    } catch (error) {
+      console.error("Sign-up error:", error);
+      alert("An error occurred during sign-up. Please try again.");
+    }
   };
 
-  const profilePicture = watch("profilePicture");
+  // Handle file preview URL creation
+  useEffect(() => {
+    if (profilePicture && profilePicture[0]) {
+      const fileUrl = URL.createObjectURL(profilePicture[0]);
+      setFileUrl(fileUrl);
+      return () => URL.revokeObjectURL(fileUrl); // Cleanup the URL
+    }
+  }, [profilePicture]);
 
   return (
     <div className="bg-gray-900 flex justify-center items-center min-h-screen">
@@ -92,6 +119,7 @@ const SignUp = () => {
                 required: "Name is required",
                 validate: (value) => validateName(value) === true || validateName(value),
               })}
+              aria-invalid={errors.name ? "true" : "false"}
             />
             {errors.name && <p className="text-red-500 text-sm mb-4">{errors.name.message}</p>}
           </div>
@@ -110,6 +138,7 @@ const SignUp = () => {
                 required: "Email is required",
                 validate: (value) => validateEmail(value) === true || validateEmail(value),
               })}
+              aria-invalid={errors.email ? "true" : "false"}
             />
             {errors.email && <p className="text-red-500 text-sm mb-4">{errors.email.message}</p>}
           </div>
@@ -128,6 +157,7 @@ const SignUp = () => {
                 required: "Password is required",
                 validate: (value) => validatePass(value) === true || validatePass(value),
               })}
+              aria-invalid={errors.password ? "true" : "false"}
             />
             {errors.password && <p className="text-red-500 text-sm mb-4">{errors.password.message}</p>}
           </div>
@@ -143,15 +173,16 @@ const SignUp = () => {
               id="profilePicture"
               accept="image/*"
               {...register("profilePicture", { required: "Profile picture is required" })}
+              aria-invalid={errors.profilePicture ? "true" : "false"}
             />
             {errors.profilePicture && (
               <p className="text-red-500 text-sm mb-4">{errors.profilePicture.message}</p>
             )}
 
-            {profilePicture && profilePicture[0] && (
+            {fileUrl && (
               <div className="mt-4">
                 <img
-                  src={URL.createObjectURL(profilePicture[0])}
+                  src={fileUrl}
                   alt="Preview"
                   className="w-20 h-20 rounded-full object-cover mx-auto"
                 />
