@@ -12,7 +12,7 @@ const router = express.Router();
 router.post('/create-user', upload.single('profilePicture'), signup);
 router.get('/activation/:token', verifyUserController);
 
-router.post('/signup', signup);
+// router.post('/signup', signup);
 router.post('/login', login);
 
 module.exports = router;

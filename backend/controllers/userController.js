@@ -1,6 +1,7 @@
 const ErrorHandler = require("../utils/ErrorHandler.js");
 const UserModel = require("../models/userModel.js");
 const transporter = require("../utils/sendmail.js");
+const cloudinary = require('../utils/cloudinary.js');
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
 
@@ -98,6 +99,20 @@ const signup = async (req, res) => {
       return res.status(403).send({ message: "User already present" });
     }
 
+    if (req.file) {
+      // Upload the avatar to Cloudinary
+      const result = await cloudinary.uploader.upload(req.file.path, {
+        folder: 'avatars',  // Specify folder in Cloudinary
+        transformation: [{ width: 200, height: 200, crop: 'fill' }],  // Optional transformation
+      });
+
+      avatar = {
+        url: result.secure_url,
+        public_id: result.public_id,
+      };
+    }
+
+
     bcrypt.hash(password, 10, async function (err, hashedPassword) {
       try {
         if (err) {
@@ -107,6 +122,7 @@ const signup = async (req, res) => {
           name,
           email,
           password: hashedPassword,
+          avatar,
         });
 
         const data = {
