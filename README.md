@@ -86,3 +86,12 @@ Retrieved the corresponding user from the database using the provided email/user
 - Password Validation:
 Used bcrypt to hash the entered password during login.
 Compared the hashed password with the stored hashed password in the database for authentication, ensuring that only valid users can log in.
+
+## **Milestone 8: Product Card Component and Homepage Layout**
+## Features Implemented
+- Card Component:
+Designed a reusable card component to display product details like name, image, and price using props.
+Ensured the component is flexible and can be used for displaying multiple products on the homepage.
+- Homepage Layout:
+Set up a clean, responsive layout using CSS grid or flexbox for displaying the product cards in an organized manner.
+Created a neat and visually appealing display for products, ensuring good user experience across different screen sizes.
