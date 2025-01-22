@@ -133,38 +133,66 @@ const signup = async (req, res) => {
     return res.status(500).send({ message: er.message });
   }
 };
+// const login = async (req, res) => {
+//   const { email, password } = req.body;
+//   try {
+//     const checkUserPresentinDB = await UserModel.findOne({ email: email });
+
+//     bcrypt.compare(
+//       password,
+//       checkUserPresentinDB.password,
+//       function (err, result) {
+//         // result == true
+//         if (err) {
+//           return res.status(403).send({ message: err.message, success: false });
+//         }
+//         let data = {
+//           id: checkUserPresentinDB._id,
+//           email,
+//           password: checkUserPresentinDB.password,
+//         };
+//         const token = generateToken(data);
+
+//         return res
+//           .status(200)
+//           .cookie("token", token)
+//           .send({ message: "User logged in successfully..", success: true });
+//       }
+//     );
+
+//     // return saying signup first
+//   } catch (er) {
+//     return res.status(403).send({ message: er.message, success: false });
+//   }
+// };
 const login = async (req, res) => {
   const { email, password } = req.body;
   try {
     const checkUserPresentinDB = await UserModel.findOne({ email: email });
 
-    bcrypt.compare(
-      password,
-      checkUserPresentinDB.password,
-      function (err, result) {
-        // result == true
-        if (err) {
-          return res.status(403).send({ message: er.message, success: false });
-        }
-        let data = {
-          id: checkUserPresentinDB._id,
-          email,
-          password: checkUserPresentinDB.password,
-        };
-        const token = generateToken(data);
+    if (!checkUserPresentinDB) {
+      return res.status(404).send({ message: "User not found", success: false });
+    }
 
-        return res
-          .status(200)
-          .cookie("token", token)
-          .send({ message: "User logged in successfully..", success: true });
+    bcrypt.compare(password, checkUserPresentinDB.password, function (err, result) {
+      if (err) {
+        return res.status(500).send({ message: "Error during password verification", success: false });
       }
-    );
+      if (!result) {
+        return res.status(401).send({ message: "Invalid email or password", success: false });
+      }
 
-    // return saying signup first
+      const token = generateToken({ id: checkUserPresentinDB._id, email: checkUserPresentinDB.email });
+      return res
+        .status(200)
+        .cookie("token", token, { httpOnly: true })
+        .send({ message: "User logged in successfully.", success: true });
+    });
   } catch (er) {
-    return res.status(403).send({ message: er.message, success: false });
+    return res.status(500).send({ message: er.message, success: false });
   }
 };
+
 module.exports = {
   // CreateUSer,
   login,

@@ -77,3 +77,12 @@ Stored only hashed passwords in the database to ensure that sensitive informatio
 - Secure Data Handling:
 Saved user data such as name, email, and hashed password in the MongoDB database.
 Ensured compliance with security standards to protect user privacy and prevent data breaches.
+
+## **Milestone 7: Login Endpoint and Password Validation**
+## Features Implemented
+- Login Endpoint:
+Created an endpoint to accept user credentials (email/username and password).
+Retrieved the corresponding user from the database using the provided email/username.
+- Password Validation:
+Used bcrypt to hash the entered password during login.
+Compared the hashed password with the stored hashed password in the database for authentication, ensuring that only valid users can log in.
