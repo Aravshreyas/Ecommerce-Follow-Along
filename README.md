@@ -95,3 +95,8 @@ Ensured the component is flexible and can be used for displaying multiple produc
 - Homepage Layout:
 Set up a clean, responsive layout using CSS grid or flexbox for displaying the product cards in an organized manner.
 Created a neat and visually appealing display for products, ensuring good user experience across different screen sizes.
+
+## **Milestone 9: Product Creation Form**
+## Features Implemented
+- Product Form: A form to input product details like name, description, price, and category.
+- Multiple Image Upload: Functionality to upload multiple product images.
