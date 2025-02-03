@@ -100,3 +100,28 @@ Created a neat and visually appealing display for products, ensuring good user e
 ## Features Implemented
 - Product Form: A form to input product details like name, description, price, and category.
 - Multiple Image Upload: Functionality to upload multiple product images.
+
+## **Milestone 10: Product Schema and Endpoint Creation**
+
+## Features Implemented
+- **Product Schema**: Defined the structure of product data (e.g., name, description, price, image URL) using Mongoose. Ensured each field has proper validation (e.g., required fields, correct data types).
+- **Endpoint Creation**: Built a POST endpoint to receive product data. Validated and saved the product details to MongoDB.
+
+## Why Validation?
+- Ensures that only valid data is saved in the database, maintaining data integrity and preventing errors.
+
+## **Milestone 11: Fetch and Display Products**
+## Features Implemented
+- Endpoint to Fetch Products:
+Wrote an endpoint that sends all product data to the frontend.
+- Fetch Products in Frontend:
+Implemented a function in the frontend to fetch all product data from the backend.
+- Display Products:
+Displayed the fetched product data dynamically by passing it to the product card component.
+
+## **Milestone 12: Product Update and Delete**
+## Features Implemented
+- Update Product:
+Implemented functionality to update existing product details. Created an endpoint to handle product updates and a form in the frontend to submit updated product data.
+- Delete Product:
+Implemented functionality to delete a product. Created an endpoint to handle product deletion and added a delete button in the frontend to remove products.
