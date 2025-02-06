@@ -125,3 +125,21 @@ Displayed the fetched product data dynamically by passing it to the product card
 Implemented functionality to update existing product details. Created an endpoint to handle product updates and a form in the frontend to submit updated product data.
 - Delete Product:
 Implemented functionality to delete a product. Created an endpoint to handle product deletion and added a delete button in the frontend to remove products.
+
+## **Milestone 13: Product Edit Functionality**
+## Features Implemented
+- Update Endpoint:
+Wrote an endpoint that receives new data and updates the existing data inside MongoDB.
+- Edit Button:
+Added an edit button to the product card in the frontend.
+- Auto-fill Form:
+When the edit button is clicked, the form is auto-filled with the existing product data, allowing the user to edit and save the changes.
+
+## **Milestone 14: Product Delete Functionality**
+## Features Implemented
+- Delete Endpoint:
+Wrote an endpoint that deletes the product data from MongoDB using the product ID.
+- Delete Button:
+Added a delete button to the product card in the frontend.
+- Delete Operation:
+When the delete button is clicked, the product ID is sent to the server endpoint to delete the product.
