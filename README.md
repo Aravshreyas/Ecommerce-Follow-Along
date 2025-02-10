@@ -152,3 +152,10 @@ Created a new Nav component with links to all pages: Home, My-products, Add prod
 Made the Navbar responsive to all screen sizes.
 - Smooth Navigation:
 Added the Nav component to all pages and ensured smooth and easy navigation between pages.
+
+## **Milestone 16: Display All Products Page**
+## Features Implemented
+- Products Page:
+Created a new page that displays all the product data.
+- Fetch and Display:
+Fetched all product data from the backend and displayed it on the new page.
