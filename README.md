@@ -143,3 +143,12 @@ Wrote an endpoint that deletes the product data from MongoDB using the product I
 Added a delete button to the product card in the frontend.
 - Delete Operation:
 When the delete button is clicked, the product ID is sent to the server endpoint to delete the product.
+
+## **Milestone 15: Navigation Component**
+## Features Implemented
+- Navigation Component:
+Created a new Nav component with links to all pages: Home, My-products, Add product, and Cart.
+- Responsive Navbar:
+Made the Navbar responsive to all screen sizes.
+- Smooth Navigation:
+Added the Nav component to all pages and ensured smooth and easy navigation between pages.
