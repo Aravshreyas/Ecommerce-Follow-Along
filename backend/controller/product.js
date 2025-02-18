@@ -191,5 +191,55 @@ router.delete('/delete-product/:id', async (req, res) => {
     }
 });
 
+router.post('/cart',async (req,res)=>{
+    try{
+
+        const {userId ,productId,quantity} = req.body;
+        const email = userId;
+    
+        if(!email){
+            return res.status(400).json({error: "Email is required"});
+        }
+    
+        if(!mongoose.Types.ObjectId.isValid(productId)){
+            return res.status(400).json({error: "Product ID is invalid"});
+        }
+    
+        if(!quantity || quantity < 1){
+            return res.status(400).json({error: "Quantity must be atleast 1"});
+        }
+    
+        const user = await User.findOne({email});
+        if(!user){
+            return res.status(400).json({error: "User not found"});
+        }
+    
+        const product = await Product.findById(productId);
+        if(!product){
+            return res.status(400).json({error: "Product not found"});
+        }
+    
+        const cartItemIndex = user.cart.findIndex(
+            (item) => item.productId.toString() === productId
+        );
+    
+        if(cartItemIndex > -1){
+            user.cart[cartItemIndex].quantity += quantity;
+        }else{
+            user.cart.push({productId, quantity});
+        }
+    
+        await user.save();
+    
+        res.status(200).json({
+            message: "cart updated successfully",
+            cart: user.cart,
+        })
+    }catch(error){
+        console.error(error);
+        res.status(500).json({error: "Server error"});
+    }
+});
+
 
 module.exports = router;

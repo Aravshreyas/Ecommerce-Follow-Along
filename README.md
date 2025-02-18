@@ -159,3 +159,22 @@ Added the Nav component to all pages and ensured smooth and easy navigation betw
 Created a new page that displays all the product data.
 - Fetch and Display:
 Fetched all product data from the backend and displayed it on the new page.
+
+## **Milestone 17: Cart Functionality**
+## Features Implemented
+- Cart Schema:
+  Defined a schema for storing cart data using MongoDB. The schema includes fields like user ID, product ID, quantity, and total price.
+- Add to Cart Endpoint:
+  Created an endpoint to receive and store product details in the cart. This endpoint accepts product ID and quantity, calculates the total price, and saves the cart data to MongoDB.
+- Fetch Cart Data:
+  Implemented an endpoint to fetch all cart data for a specific user. This endpoint retrieves the cart items from the database and sends them to the frontend.
+- Update Cart:
+  Created an endpoint to update the quantity of a product in the cart. This endpoint accepts the cart item ID and the new quantity, recalculates the total price, and updates the cart data in MongoDB.
+- Remove from Cart:
+  Implemented an endpoint to remove a product from the cart. This endpoint accepts the cart item ID and deletes the corresponding cart item from the database.
+- Cart Page:
+  Created a new page that displays all the cart items for the user. This page fetches the cart data from the backend and displays it in a user-friendly format.
+- Responsive Cart Page:
+  Made the cart page responsive to all screen sizes, ensuring a smooth user experience on both desktop and mobile devices.
+
+ 
