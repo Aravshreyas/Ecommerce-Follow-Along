@@ -177,4 +177,9 @@ Fetched all product data from the backend and displayed it on the new page.
 - Responsive Cart Page:
   Made the cart page responsive to all screen sizes, ensuring a smooth user experience on both desktop and mobile devices.
 
- 
+  ## **Milestone 18: Cart Page Backend Integration**
+## Features Implemented
+- Create Backend Endpoint for Cart Page:
+  Developed a backend endpoint to handle requests for the cart page. This endpoint is responsible for retrieving the cart data for a specific user.
+- Get Products Inside Cart for User:
+  Implemented an endpoint to fetch all products inside the cart for a specific user. This endpoint retrieves the cart items from the database and sends them to the frontend.
