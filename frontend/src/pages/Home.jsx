@@ -1,8 +1,9 @@
 // react-app/src/pages/Home.js
-//milestone_15 completed
+//milestone_16 completed
 import React, { useEffect, useState } from "react";
 import Product from "../components/auth/Product";
 import Nav from "../components/auth/nav";
+
 
 export default function Home() {
   const [products, setProducts] = useState([]);

@@ -194,3 +194,17 @@ Fetched all product data from the backend and displayed it on the new page.
   Created backend endpoints to handle requests for increasing and decreasing product quantities in the cart.
 - Understanding Cart Functionality:
   This lesson helps in understanding how to create and manage cart functionality effectively.
+
+## **Milestone 20: User Profile Page**
+## Features Implemented
+- Backend Endpoint for User Data:
+  Created a backend endpoint to send user data.
+- Frontend Profile Page:
+  Designed a frontend profile page to display user information.
+- Display User Information:
+  Displayed profile photo, name, and email in one section.
+- Address Section:
+  Displayed address information in another section with an "Add address" button.
+  If no address is found, displayed "No address found".
+- Understanding Profile Page:
+  This lesson helps in understanding how to display and manage a user profile page effectively.
