@@ -177,9 +177,20 @@ Fetched all product data from the backend and displayed it on the new page.
 - Responsive Cart Page:
   Made the cart page responsive to all screen sizes, ensuring a smooth user experience on both desktop and mobile devices.
 
-  ## **Milestone 18: Cart Page Backend Integration**
+## **Milestone 18: Cart Page Backend Integration**
 ## Features Implemented
 - Create Backend Endpoint for Cart Page:
   Developed a backend endpoint to handle requests for the cart page. This endpoint is responsible for retrieving the cart data for a specific user.
 - Get Products Inside Cart for User:
   Implemented an endpoint to fetch all products inside the cart for a specific user. This endpoint retrieves the cart items from the database and sends them to the frontend.
+
+## **Milestone 19: Cart Quantity Management**
+## Features Implemented
+- Create Cart Frontend Page:
+  Designed a frontend page to display the products in the cart.
+- Quantity Management:
+  Added options to increase and decrease the quantity of each product using + and - buttons.
+- Backend Endpoints for Quantity Management:
+  Created backend endpoints to handle requests for increasing and decreasing product quantities in the cart.
+- Understanding Cart Functionality:
+  This lesson helps in understanding how to create and manage cart functionality effectively.
