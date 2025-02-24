@@ -208,3 +208,14 @@ Fetched all product data from the backend and displayed it on the new page.
   If no address is found, displayed "No address found".
 - Understanding Profile Page:
   This lesson helps in understanding how to display and manage a user profile page effectively.
+
+## **Milestone 21: Address Form Page**
+## Features Implemented
+- Address Form Frontend Page:
+  Created a frontend page with a form to input address details.
+- State Management for Address:
+  Created a state to store the input address.
+- Navigation from Profile to Address Form:
+  Implemented navigation from the profile page to the address form page when the "Add address" button is clicked.
+- Understanding Address Form:
+  This lesson helps in understanding how to create and manage an address form page effectively.
