@@ -219,3 +219,12 @@ Fetched all product data from the backend and displayed it on the new page.
   Implemented navigation from the profile page to the address form page when the "Add address" button is clicked.
 - Understanding Address Form:
   This lesson helps in understanding how to create and manage an address form page effectively.
+
+## **Milestone 22: Store Address Endpoint**
+## Features Implemented
+- Address Storage Endpoint:
+  Created an endpoint to receive the address from the address form in the frontend.
+- Add Address to User Collection:
+  Added the received address to the address array inside the user collection in the database.
+- Understanding Address Storage:
+  This lesson helps in understanding how to create an endpoint that will store the address in the database.
