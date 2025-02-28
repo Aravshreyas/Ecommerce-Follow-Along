@@ -239,3 +239,16 @@ Fetched all product data from the backend and displayed it on the new page.
   Wrote a backend endpoint to send all the addresses of the user.
 - Understanding Address Selection:
   This lesson helps in understanding how to create and manage the address selection process for placing an order.
+
+## **Milestone 24: Order Summary and Placement**
+## Features Implemented
+- Display Ordered Products:
+  Displayed all the products that the user is ordering.
+- Display Selected Address:
+  Displayed the address selected by the user for delivery.
+- Display Total Cart Value:
+  Displayed the total value of the cart.
+- Place Order Button:
+  Added a "Place Order" button at the bottom of the page.
+- Understanding Order Placement:
+  This lesson helps in understanding how to implement the place order functionality effectively.
