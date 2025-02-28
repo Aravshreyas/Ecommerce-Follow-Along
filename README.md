@@ -228,3 +228,14 @@ Fetched all product data from the backend and displayed it on the new page.
   Added the received address to the address array inside the user collection in the database.
 - Understanding Address Storage:
   This lesson helps in understanding how to create an endpoint that will store the address in the database.
+
+## **Milestone 23: Select Address for Order**
+## Features Implemented
+- Place Order Button:
+  Created a "Place Order" button inside the cart page that navigates to the select address page when clicked.
+- Select Address Page:
+  Designed a page to display all available addresses with an option to select one address.
+- Backend Endpoint for User Addresses:
+  Wrote a backend endpoint to send all the addresses of the user.
+- Understanding Address Selection:
+  This lesson helps in understanding how to create and manage the address selection process for placing an order.
