@@ -252,3 +252,14 @@ Fetched all product data from the backend and displayed it on the new page.
   Added a "Place Order" button at the bottom of the page.
 - Understanding Order Placement:
   This lesson helps in understanding how to implement the place order functionality effectively.
+
+## **Milestone 25: Place Order Endpoint**
+## Features Implemented
+- Order Placement Endpoint:
+  Created an endpoint to receive the products, user, and address details.
+- Retrieve User ID:
+  Retrieved the user ID using the email of the user.
+- Store Order Details:
+  For each product, created a separate order with the same address and stored the order details in the MongoDB order collection using the order schema.
+- Understanding Order Placement:
+  This lesson helps in understanding how to create an endpoint that places an order in the database.
