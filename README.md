@@ -263,3 +263,16 @@ Fetched all product data from the backend and displayed it on the new page.
   For each product, created a separate order with the same address and stored the order details in the MongoDB order collection using the order schema.
 - Understanding Order Placement:
   This lesson helps in understanding how to create an endpoint that places an order in the database.
+
+## **Milestone 26: Retrieve User Orders**
+## Features Implemented
+- Retrieve Orders Endpoint:
+  Created an endpoint to receive the user's email.
+- Retrieve User ID:
+  Retrieved the user ID using the email of the user.
+- Fetch User Orders:
+  Using the user ID, fetched all the orders of that user from the database.
+- Send Orders in Response:
+  Sent all the user's orders in the response.
+- Understanding Order Retrieval:
+  This lesson helps in understanding how to create an endpoint that retrieves and sends user orders.
