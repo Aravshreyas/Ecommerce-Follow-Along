@@ -277,19 +277,17 @@ Fetched all product data from the backend and displayed it on the new page.
 - Understanding Order Retrieval:
   This lesson helps in understanding how to create an endpoint that retrieves and sends user orders.
 
-## **Milestone 27: Endpoint Validation and PR**
+## **Milestone 27: My Orders Page**
 ## Features Implemented
-- Branch Creation:
-  Created a new branch locally for the changes.
-- Endpoint Validation:
-  Added validation for all endpoints where entities are created.
-- Commit and Push:
-  Committed the changes and pushed them to GitHub.
-- Pull Request:
-  Created a Pull Request (PR) on GitHub.
-- AI Review:
-  Requested an AI review using @CodiumAI-Agent /review.
-- Video Recording:
-  Recorded a video explaining and showing the changes made in this part of the project.
-- Understanding Validation and PR:
-  This lesson helps in understanding how to add validation to endpoints, create a branch, commit changes, push to GitHub, create a PR, and request an AI review.
+- My Orders Page:
+  Created a new "My Orders" page.
+- Fetch User Orders:
+  Sent a GET request to the "my-orders" endpoint created in the previous milestone.
+- Send User Email:
+  Sent the user's email to the endpoint to get all the user's orders.
+- Display User Orders:
+  Displayed all the user's orders on the "My Orders" page.
+- Add to Navbar:
+  Added the "My Orders" page to the navbar for better navigation.
+- Understanding My Orders Page:
+  This lesson helps in understanding how to create a page to display user orders and integrate it into the navigation.
