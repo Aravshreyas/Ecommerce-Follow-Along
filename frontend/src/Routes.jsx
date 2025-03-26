@@ -10,7 +10,7 @@ import Profile from "./pages/Profile.jsx"
 import CreateAddress from "./pages/createAddress.jsx";
 import SelectAddress from "./pages/SelectAddress.jsx";
 import OrderConfirmation from "./pages/OrderConfirmation.jsx";
-import MyOrdersPage from './pages/myorders.jsx';
+import MyOrdersPage from './pages/myorder.jsx';
 
 
 

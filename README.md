@@ -291,3 +291,16 @@ Fetched all product data from the backend and displayed it on the new page.
   Added the "My Orders" page to the navbar for better navigation.
 - Understanding My Orders Page:
   This lesson helps in understanding how to create a page to display user orders and integrate it into the navigation.
+
+## **Milestone 28: Cancel Order Functionality**
+## Features Implemented
+- Cancel Order Button:
+  Added a "Cancel Order" button for every order on the "My Orders" page.
+- Conditional Display:
+  Ensured the "Cancel Order" button is not displayed if the order is already canceled.
+- Cancel Order Endpoint:
+  Created an endpoint to receive the order ID.
+- Update Order Status:
+  Retrieved the order using the provided ID, marked its status as "canceled," and saved the changes.
+- Understanding Order Cancellation:
+  This lesson helps in understanding how to implement functionality to cancel user orders.
