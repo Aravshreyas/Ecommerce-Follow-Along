@@ -304,3 +304,18 @@ Fetched all product data from the backend and displayed it on the new page.
   Retrieved the order using the provided ID, marked its status as "canceled," and saved the changes.
 - Understanding Order Cancellation:
   This lesson helps in understanding how to implement functionality to cancel user orders.
+
+## **Milestone 29: Payment Options Setup**
+## Features Implemented
+- PayPal Account Setup:
+  - Created a PayPal account and logged into the PayPal developer dashboard.
+  - Created a sandbox account and copied the UserID for future use.
+  - Retrieved and saved the client ID from the sandbox account.
+- Payment Options:
+  Added two payment options on the order confirmation page: Cash on Delivery (COD) and Online Payment.
+- Radio Buttons:
+  Created radio buttons to select between COD and Online Payment.
+- PayPal Button Placeholder:
+  Displayed PayPal buttons dynamically when the Online Payment option is selected.
+- Understanding Payment Options Setup:
+  This lesson helps in understanding how to set up PayPal sandbox accounts and prepare for integrating PayPal buttons for online payments.
