@@ -319,3 +319,16 @@ Fetched all product data from the backend and displayed it on the new page.
   Displayed PayPal buttons dynamically when the Online Payment option is selected.
 - Understanding Payment Options Setup:
   This lesson helps in understanding how to set up PayPal sandbox accounts and prepare for integrating PayPal buttons for online payments.
+
+## **Milestone 30: PayPal Integration**
+## Features Implemented
+- PayPal API Integration:
+  Implemented online payment functionality using the PayPal API and the client key created earlier.
+- React PayPal Package:
+  Installed the `react-paypal-js` NPM package to simplify PayPal integration.
+- PayPalScriptProvider Component:
+  Used the `PayPalScriptProvider` component from the package to display online payment methods such as credit or debit cards.
+- Dynamic Payment Options:
+  Ensured that PayPal payment options are displayed dynamically when the Online Payment option is selected.
+- Understanding PayPal Integration:
+  This lesson helps in understanding how to integrate online payments using PayPal API and React components.
