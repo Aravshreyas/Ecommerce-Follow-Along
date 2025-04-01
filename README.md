@@ -332,3 +332,18 @@ Fetched all product data from the backend and displayed it on the new page.
   Ensured that PayPal payment options are displayed dynamically when the Online Payment option is selected.
 - Understanding PayPal Integration:
   This lesson helps in understanding how to integrate online payments using PayPal API and React components.
+
+## **Milestone 31: Redux Setup for Global State**
+## Features Implemented
+- Install Redux:
+  Installed the `react-redux` NPM package to manage global state.
+- Create Store Folder:
+  Created a new folder named `store` with two files: `store.js` and `userActions.js`.
+- Configure Store:
+  Configured a Redux store in `store.js` with a `userReducer` function to handle the global user email state.
+- Define User Actions:
+  Wrote a function `setEmail` in `userActions.js` to store the email state in the global state.
+- Wrap App Component:
+  Updated `index.js` to wrap the `App` component inside the `Provider` component with the store passed as a prop.
+- Understanding Redux Setup:
+  This lesson helps in understanding how to set up Redux for managing global state and preparing for using it across the application.
