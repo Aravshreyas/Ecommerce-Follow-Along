@@ -347,3 +347,14 @@ Fetched all product data from the backend and displayed it on the new page.
   Updated `index.js` to wrap the `App` component inside the `Provider` component with the store passed as a prop.
 - Understanding Redux Setup:
   This lesson helps in understanding how to set up Redux for managing global state and preparing for using it across the application.
+
+## **Milestone 32: Using Redux State Across Pages**
+## Features Implemented
+- Access Redux State:
+  Accessed the global state managed by Redux in multiple pages of the application.
+- Use Redux State:
+  Used the stored user email state across different components and pages for consistent data handling.
+- Update Redux State:
+  Demonstrated how to update the global state using Redux actions like `setEmail`.
+- Learning Goals:
+  By the end of this milestone, you will understand how to use Redux to store the state and access it across all pages in the application.
