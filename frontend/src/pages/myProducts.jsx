@@ -2,23 +2,25 @@ import React, { useEffect, useState } from "react";
 import Myproduct from "../components/auth/myProducts"; // <-- Import the Product component
 
 import Nav from "../components/auth/nav";
+import axios from "axios";
 
 export default function MyProducts() {
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
-    const email = "test@gmail.com";
+    const email = "Pranav@gmail.com";
 
     useEffect(() => {
-        fetch(`http://localhost:8000/api/v2/product/my-products?email=${email}`)
+        let response=axios.get(`http://localhost:8000/api/v2/product/my-products?email=${email}`)
+        
             .then((res) => {
-                if (!res.ok) {
+                console.log("Response from server:", res);
+                if (!res.data) {
                     throw new Error(`HTTP error! status: ${res.status}`);
-                }
-                return res.json();
-            })
-            .then((data) => {
-                setProducts(data.products);
+                };
+                console.log("Response data:", res.data.products);
+                
+                setProducts(res.data.products);
                 setLoading(false);
             })
             .catch((err) => {

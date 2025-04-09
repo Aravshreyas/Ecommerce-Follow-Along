@@ -358,3 +358,14 @@ Fetched all product data from the backend and displayed it on the new page.
   Demonstrated how to update the global state using Redux actions like `setEmail`.
 - Learning Goals:
   By the end of this milestone, you will understand how to use Redux to store the state and access it across all pages in the application.
+
+## **Milestone 34: JWT Token Validation**
+## Features Implemented
+- Retrieve Token:
+  Retrieved the JWT token from the browser cookies and sent it to the server with every request.
+- Middleware for Validation:
+  Wrote a middleware function in the backend to validate the JWT token.
+- Page Access Restriction:
+  Ensured that every page validates the token before granting access, preventing unauthorized users from accessing protected pages.
+- Understanding JWT Validation:
+  This lesson helps in understanding how to validate JWT tokens and secure pages by enforcing authentication.
